@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="t4is.uv.mx/conversion"
+xmlns:tns="t4is.uv.mx/conversion" elementFormDefault="qualified">
+    <xs:element name="CelsiusRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="temperatura" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CelsiusResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="respuesta" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FahrenheitRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="temperatura" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FahrenheitResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="respuesta" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ConversionesRequest"/>
+    <xs:element name="ConversionesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="conversiones" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"></xs:element>
+                            <xs:element name="temperatura" type="xs:string"></xs:element>
+                            <xs:element name="Tipo" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
